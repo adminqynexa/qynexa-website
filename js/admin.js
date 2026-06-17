@@ -12,60 +12,58 @@ function login() {
         .then((userCredential) => {
 
             alert("Login Successful!");
-
             console.log(userCredential.user.email);
 
         })
         .catch((error) => {
 
             alert(error.message);
-
             console.error(error);
 
         });
 }
 
-
 function addProduct() {
 
-```
-const name = document.getElementById("productName").value;
-const description = document.getElementById("description").value;
-const price = document.getElementById("price").value;
-const offer = document.getElementById("offer").value;
-const size = document.getElementById("size").value;
-const image = document.getElementById("image").value;
+    const name = document.getElementById("productName").value;
+    const description = document.getElementById("description").value;
+    const price = document.getElementById("price").value;
+    const offer = document.getElementById("offer").value;
+    const size = document.getElementById("size").value;
+    const image = document.getElementById("image").value;
 
-if (!name || !description || !price || !offer || !size || !image) {
-    alert("Please fill all fields");
-    return;
-}
+    if (!name || !description || !price || !offer || !size || !image) {
+        alert("Please fill all fields");
+        return;
+    }
 
-window.db.collection("products").add({
-    name: name,
-    description: description,
-    price: price,
-    offer: offer,
-    size: size,
-    image: image,
-    createdAt: new Date()
-})
-.then(() => {
-    alert("Product Added Successfully");
+    window.db.collection("products").add({
+        name: name,
+        description: description,
+        price: price,
+        offer: offer,
+        size: size,
+        image: image,
+        createdAt: new Date()
+    })
+    .then(() => {
 
-    document.getElementById("productName").value = "";
-    document.getElementById("description").value = "";
-    document.getElementById("price").value = "";
-    document.getElementById("offer").value = "";
-    document.getElementById("size").value = "";
-    document.getElementById("image").value = "";
-})
-.catch((error) => {
-    alert(error.message);
-    console.error(error);
-});
-```
+        alert("Product Added Successfully");
 
+        document.getElementById("productName").value = "";
+        document.getElementById("description").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("offer").value = "";
+        document.getElementById("size").value = "";
+        document.getElementById("image").value = "";
+
+    })
+    .catch((error) => {
+
+        alert(error.message);
+        console.error(error);
+
+    });
 }
 
 window.login = login;
