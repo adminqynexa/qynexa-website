@@ -3,19 +3,27 @@ window.db = firebase.firestore();
 
 function login() {
 
-```
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+    alert("Login button clicked");
 
-auth.signInWithEmailAndPassword(email, password)
-.then((userCredential) => {
-    alert("Login Successful!");
-    console.log(userCredential.user.email);
-})
-.catch((error) => {
-    alert(error.message);
-    console.error(error);
-});
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+
+            alert("Login Successful!");
+
+            console.log(userCredential.user.email);
+
+        })
+        .catch((error) => {
+
+            alert(error.message);
+
+            console.error(error);
+
+        });
+}
 ```
 
 }
