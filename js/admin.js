@@ -1,5 +1,5 @@
-const auth = firebase.auth();
-const db = firebase.firestore();
+window.auth = firebase.auth();
+window.db = firebase.firestore();
 
 function login() {
 
@@ -35,7 +35,7 @@ if (!name || !description || !price || !offer || !size || !image) {
     return;
 }
 
-db.collection("products").add({
+window.db.collection("products").add({
     name: name,
     description: description,
     price: price,
