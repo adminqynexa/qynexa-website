@@ -1,5 +1,3 @@
-const db = firebase.firestore();
-
 const productList = document.getElementById("product-list");
 
 db.collection("products").get().then((snapshot) => {
