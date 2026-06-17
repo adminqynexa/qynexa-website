@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Qynexa Admin</h1>
+
+<input id="email" placeholder="Email">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+Login
+</button>
+
+<hr>
+
+<h2>Add Product</h2>
+
+<input id="productName"
+placeholder="Product Name">
+
+<input id="price"
+placeholder="Price">
+
+<input id="offerPrice"
+placeholder="Offer Price">
+
+<input type="file"
+id="productImage">
+
+<button onclick="addProduct()">
+Save Product
+</button>
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+</html>
