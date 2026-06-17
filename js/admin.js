@@ -25,7 +25,6 @@ function login() {
         });
 }
 
-}
 
 function addProduct() {
 
