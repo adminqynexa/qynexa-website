@@ -1,28 +1,37 @@
-db.collection("products")
-  .get()
-  .then((snapshot) => {
+const db = firebase.firestore();
 
-    let output = "";
+const productList = document.getElementById("product-list");
 
-    snapshot.forEach((doc) => {
+db.collection("products").get().then((snapshot) => {
 
-      const product = doc.data();
+productList.innerHTML = "";
 
-      output += `
-        <div class="product-card">
-          <img src="${product.image}" width="250">
-          <h3>${product.name}</h3>
-          <p>₹${product.price}</p>
-          <p>${product.offer}</p>
+snapshot.forEach((doc) => {
 
-          <a href="https://wa.me/91XXXXXXXXXX?text=I want to order ${product.name}">
-            <button>Order on WhatsApp</button>
-          </a>
+const p = doc.data();
 
-        </div>
-      `;
-    });
+productList.innerHTML += `
+<div class="product-card">
 
-    document.getElementById("product-list").innerHTML = output;
+<img src="${p.image}" alt="${p.name}" width="250">
 
-  });
+<h3>${p.name}</h3>
+
+<p>${p.description}</p>
+
+<h2>₹${p.price}</h2>
+
+<p>${p.offer}</p>
+
+<p>Sizes: ${p.size}</p>
+
+<a href="https://wa.me/919999999999?text=I%20want%20to%20order%20${encodeURIComponent(p.name)}" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+
+</div>
+`;
+
+});
+
+});
