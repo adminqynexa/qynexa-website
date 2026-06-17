@@ -1,64 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Qynexa Fashion</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body{
-            margin:0;
-            font-family:Arial;
-            background:#000;
-            color:white;
-            text-align:center;
-        }
-
-        header{
-            padding:20px;
-            background:#111;
-        }
-
-        .logo{
-            width:200px;
-        }
-
-        .banner{
-            padding:40px;
-        }
-
-        .btn{
-            background:gold;
-            color:black;
-            padding:12px 25px;
-            text-decoration:none;
-            border-radius:5px;
-            font-weight:bold;
-        }
-
-        .offer{
-            color:gold;
-            font-size:24px;
-            margin:20px;
-        }
-    </style>
+<title>Qynexa Fashion</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>QYNEXA FASHION</h1>
+<img src="images/logo.png" width="200">
+<h1>Qynexa Fashion</h1>
 </header>
 
-<div class="banner">
-    <h2>Premium Men's Fashion</h2>
+<section class="hero">
 
-    <div class="offer">
-        Buy 1 @ ₹279 <br>
-        Buy Any 3 @ ₹749
-    </div>
+<h2>Premium Men's Fashion</h2>
 
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">
-        Order on WhatsApp
-    </a>
-</div>
+<h3>Buy 1 @ ₹299</h3>
+<h3>Buy Any 3 @ ₹799</h3>
+
+<a href="#products">
+<button>Shop Now</button>
+</a>
+
+</section>
+
+<section id="products">
+
+<h2>Latest Collection</h2>
+
+<div id="product-list"></div>
+
+</section>
+
+<section>
+
+<h2>Contact Us</h2>
+
+<input id="name" placeholder="Name">
+<input id="mobile" placeholder="Mobile">
+<textarea id="message"></textarea>
+
+<button>Send Enquiry</button>
+
+</section>
 
 </body>
 </html>
